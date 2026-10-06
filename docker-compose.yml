@@ -4,6 +4,8 @@ services:
     working_dir: /app
     volumes:
       - .:/app
+    ports:
+      - "127.0.0.1:8080:8080"
     environment:
       APP_PORT: ${APP_PORT:-8080}
       REDIS_ADDR: ${REDIS_ADDR:-redis:6379}
